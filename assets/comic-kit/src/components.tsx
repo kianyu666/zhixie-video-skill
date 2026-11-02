@@ -8,10 +8,8 @@ export const progress=(frame:number,start:number,end:number)=>interpolate(frame,
 const font={fontFamily:'Microsoft YaHei, sans-serif',fontWeight:900} as const;
 
 /** 可单独放在每个镜头中。 */
-export function Paper({section}:{section:string}){
-  return <AbsoluteFill style={{backgroundColor:'#eee8d8',backgroundImage:'radial-gradient(#756c6040 .9px, transparent 1.2px)',backgroundSize:'5px 5px',color:ink,...font}}>
-    <div style={{position:'absolute',left:70,top:68,background:blue,border:`4px solid ${ink}`,color:'white',fontSize:31,padding:'10px 20px',boxShadow:`6px 6px 0 ${ink}`}}>智械 · {section}</div>
-  </AbsoluteFill>;
+export function Paper(_props:{section:string}){
+  return <AbsoluteFill style={{backgroundColor:'#eee8d8',backgroundImage:'radial-gradient(#756c6040 .9px, transparent 1.2px)',backgroundSize:'5px 5px',color:ink,...font}}/>;
 }
 export function Title({children}:{children:React.ReactNode}){
   return <div style={{position:'absolute',top:190,left:68,right:68,background:paper,border:`6px solid ${ink}`,boxShadow:`10px 10px 0 ${ink}`,padding:'25px 34px',transform:'rotate(-1deg)',...font,fontSize:70,lineHeight:1.27,color:ink}}>{children}</div>;
